@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # 投稿完了画面
   def create
     User.create(user_params)
+    redirect_to :action => "index"
   end
 
   # 編集画面
@@ -22,12 +23,14 @@ class UsersController < ApplicationController
   def update
     user = User.find(params[:id])
     user.update(user_params)
+    redirect_to :action => "index"
   end
   
   # 削除完了画面
   def destroy
     user = User.find(params[:id])
     user.delete
+    redirect_to :action => "index"
   end
   
   
