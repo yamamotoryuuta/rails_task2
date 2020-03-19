@@ -1,0 +1,7 @@
+<h1>新規投稿画面</h1>
+
+<%= form_for @user, url: "/users/create", method: :post  do |f| %>
+<p>お名前：　<%= f.text_field :name %></p>
+<p>年齢：　<%= f.text_field :age %></p>
+<input type="submit" value="投稿する">
+<% end %>

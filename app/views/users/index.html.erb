@@ -1,0 +1,12 @@
+<h1>投稿一覧画面</h1>
+
+<% @users.each do | user | %>
+<p>
+  お名前：<%= user.name%>
+  年齢：<%= user.age%>
+  <%= link_to "編集する", "/users/#{user.id}/edit", method: :get %>
+  <%= link_to "削除", "/users/#{user.id}", method: :delete, data: {confirm: "削除しますか？"} %>
+</p>
+<% end %>
+
+<%= link_to "新規投稿画面へ","/users/new" %>
