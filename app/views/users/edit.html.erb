@@ -1,6 +1,6 @@
 <h1> 投稿編集</h1>
 
-<%= form_for @user, url:"/users/#{@user.id}", method: :patch do |f| %>
+<%= form_for @user, url: user_path(@user.id), method: :patch do |f| %>
   <p>お名前：<%= f.text_field :name %></p>
   <p>年齢：<%= f.text_field :age %></p>
   <input type="submit" value="編集する">
